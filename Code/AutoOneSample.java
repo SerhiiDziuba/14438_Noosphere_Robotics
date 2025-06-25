@@ -42,24 +42,25 @@ public class AutoOneSample extends LinearOpMode {
             
             claws.setPosition(0.35);
             sleep(2000);
-            handUp(1500);
-            driveForward(150);
+            handUp(1800);
+            driveForward(100);
             sleep(500);
             stopMotors(); 
             driveLeft(1200) ;
             stopMotors(); 
            //sleep(1300);
-           driveForward(300);//330
+           driveForward(285);//330
            
           stopMotors(); 
            handDown();
+           sleep(350);
            claws.setPosition(0);
            
          
-           driveBack(700);
+           driveBack(700);//800
            stopMotors(); 
            //handUp(1100);
-          driveRight(1800);
+          driveRight(1900);
            
            
             //driveBack();
@@ -87,7 +88,7 @@ public class AutoOneSample extends LinearOpMode {
            //showTelemetry();
         }
     }
-    private void handUp(int i){
+    private void handUp(int i) {
     arm.setPower(1);
     sleep(i);
     arm.setPower(0);
@@ -111,9 +112,9 @@ public class AutoOneSample extends LinearOpMode {
     }
         private void handDown(){
             //sleep(20);
-            arm.setPower(-0.4);
+            arm.setPower(-0.8);
             sleep(600);
-            claws.setPosition(0.1);
+            //claws.setPosition(0.1);
         }
         private void driveBack(int i){
         left1.setPower(-0.35);
